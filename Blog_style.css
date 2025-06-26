@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0px 10px;
+    max-width: 100%;
+    text-align: left;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+}
+.logo-head {
+  font-size: 40px;
+}
+a {
+  /* text-decoration: none; */
+  color: inherit;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: normal;
+  font-size: inherit;
+}
+@media only screen and (max-width: 650px) {
+  * {
+    font-size: 14px;
+  }
+}

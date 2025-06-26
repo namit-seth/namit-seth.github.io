@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namit Seth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body class="poppins-regular">
+    <header id="home">
+        <div id="header">
+            <a href="../"><span class="poppins-bold logo-head">NAMIT SETH</span></a>
+            <span class="poppins-regular nav-head">
+                <button class="hamburger-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                        fill="#000000">
+                        <path d="M100-207v-92.5h761v92.5H100Zm0-227.5V-526h761v91.5H100Zm0-226.5v-92.5h761v92.5H100Z" />
+                    </svg>
+                </button>
+                <span id="nav">
+                    <a href="/#home"><span>HOME</span></a>
+                    <a href="/#about_para"><span>ABOUT</span></a>
+                    <a href="/#projects"><span>PROJECTS</span></a>
+                </span>
+            </span>
+        </div>
+    </header>
+    <section id="about" class="poppins-regular">
+        <span>
+            <h1 class="poppins-bold ">NAMIT SETH</h1>
+            <h3 class="poppins-regular">Showcasing Innovation in Electronics & Programming</h3>
+            <span class="button"><button class="poppins-bold">CONTACT</button></span></span>
+    </section>
+    <section id="about_para">
+        <p>Namit Seth is a driven BSc Electronics student at Delhi University, showcasing a strong foundation in electronics and programming. Specializing in circuit design, Arduino projects, and PCB design, Namit also possesses expertise in Python, C++, HTML, and JavaScript. As the Secretary of Electronika and Budget Head of Cesar, he has successfully led teams to execute technical events and innovative projects, including life-sized arcade games and robotics displays. With a commitment to developing efficient systems and fostering collaboration, Namit is advancing the frontiers of electronics innovation.</p>
+        <div id="Namit_image"></div>
+    </section>
+    <section id="projects">
+        <div class="project">
+            <img src="/EVM/EVM.jpg" alt="project_image" width="100%">
+            <div>
+            <h3>Electronic Voting Machine</h3>
+            <p>A simple Arduino project that simulates an electronic voting machine using push buttons, LEDs, buzzer, and LCD. Users can cast votes for three candidates, and the results are displayed on the LCD. Built for learning embedded systems and digital interfacing.</p>
+            <a href="/EVM/">Learn More..</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="/Testeefy/Testeefy.jpg" alt="Project_image" width="100%">
+            <div>
+            <h3>Testeefy</h3>
+            <p>Testeefy is a simple web app where examiners create quizzes and candidates take them. Built with Flask and SQLite, it handles user login, test creation, submissions, and result tracking.
+
+</p>
+            <a href="/Testeefy/">Learn More..</a>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSeauhCvQ_ycd1NqGHWDDoScLqWOG4wTKc97wzDUkBSlDS_2xw/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="POST">
+    <fieldset>
+        <h2>Contact Information<br><small></small></h2>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1633920210" -->
+    <fieldset>
+        <legend for="1633920210">Name</legend>
+        <div class="form-group">
+            <input id="2005620554" type="text" name="entry.2005620554" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "227649005" -->
+    <fieldset>
+        <legend for="227649005">Email</legend>
+        <div class="form-group">
+            <input id="1045781291" type="text" name="entry.1045781291" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "short" id: "1770822543" -->
+    <fieldset>
+        <legend for="1770822543">Phone number</legend>
+        <div class="form-group">
+            <input id="1166974658" type="text" name="entry.1166974658" class="form-control" >
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "paragraph" id: "1846923513" -->
+    <fieldset>
+        <legend for="1846923513">Message</legend>
+        <div class="form-group">
+            <textarea id="839337160" name="entry.839337160" class="form-control" ></textarea>
+        </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="8197509122644349644">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+        <div>
+            <h1>Namit Seth</h1>
+            <h3><a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></h3>
+            <div>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank"><span><img src="/linkedin.png" alt="linkedin" height="50"></span></a>
+                <a href="https://github.com/namit-seth/" target="_blank"><span><img src="/github.png" alt="github" height="50"></span></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
