@@ -21,6 +21,9 @@ header {
   display: flex;
   align-items: center;
 }
+header a{
+  text-decoration: none;
+}
 #header {
     display: flex;
     justify-content: space-around;
