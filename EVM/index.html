@@ -4,148 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namit Seth</title>
+    <title>EVM Project | Arduino Voting Machine</title>
     <link rel="stylesheet" href="../Blog_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </head>
 
 <body class="poppins-regular">
     <header id="home">
         <div id="header">
-            <a href="../"><span class="poppins-bold logo-head">NAMIT SETH</span></a>
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
         </div>
     </header>
-    <section>
-<h1>🗳️ Building a Simple Electronic Voting Machine (EVM) with Arduino</h1>
-<p><strong>Author</strong>: Namit Seth<br>
-<strong>Project Repository</strong>: <a href="https://github.com/namit-seth/EVM-V2">EVM-V2 on GitHub</a><br>
-<strong>TinkerCAD Simulation</strong>: <a href="https://www.tinkercad.com/things/6YQpShvm2TO-evm-v2">Live Circuit Simulation</a></p>
 
-<hr>
+    <main class="page-shell">
+        <section class="blog-hero">
+            <p class="blog-kicker">Hardware case study</p>
+            <h1 class="blog-title">Building a Simple Electronic Voting Machine (EVM) with Arduino</h1>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">Embedded &amp; UI</span>
+            </div>
+        </section>
 
-<h2>🔧 Introduction</h2>
-<p>Electronic Voting Machines (EVMs) are a modern replacement for traditional ballot paper-based voting systems. They offer faster results, reduced human error, and are environmentally friendly. In this blog, I’ll walk you through my <strong>Arduino-based EVM Project (V2)</strong>—a simplified version that demonstrates the working of a voting machine with live vote tallying and result display on an LCD screen.</p>
+        <article class="blog-card">
+            <p><strong>Electronic Voting Machines (EVMs)</strong> are a modern replacement for traditional ballot
+                paper-based voting systems. They offer faster results, reduced human error, and are environmentally
+                friendly. In this project, I built an <strong>Arduino-based EVM (V2)</strong> that demonstrates a
+                complete
+                voting flow with live vote tallying and results shown on an LCD screen.</p>
 
-<hr>
+            <hr>
 
-<h2>🧠 Project Objective</h2>
-<ul>
-  <li>Allows two candidates to receive votes via push buttons.</li>
-  <li>Displays a real-time voting interface.</li>
-  <li>Shows the winner after voting ends.</li>
-  <li>Uses simple components that can be breadboarded and simulated using TinkerCAD.</li>
-</ul>
+            <h2>Project objectives</h2>
+            <ul>
+                <li>Allow two candidates to receive votes via push buttons.</li>
+                <li>Display a real-time voting interface on the LCD.</li>
+                <li>Show the winner once voting ends.</li>
+                <li>Use simple, easily breadboarded components that can also be simulated in TinkerCAD.</li>
+            </ul>
 
-<hr>
+            <hr>
 
-<h2>🔩 Components Used</h2>
-<ul>
-  <li>1 x Arduino Uno</li>
-  <li>1 x 16x2 LCD display</li>
-  <li>3 x Push buttons (for voting)</li>
-  <li>1 x Push button (to end voting & show result)</li>
-  <li>3 x LEDs (to indicate votes being cast)</li>
-  <li>1 x Buzzer (to confirm button press)</li>
-  <li>Resistors: 220Ω, 1kΩ</li>
-  <li>Breadboard and jumper wires</li>
-</ul>
+            <h2>Components used</h2>
+            <ul>
+                <li>1 × Arduino Uno</li>
+                <li>1 × 16×2 LCD display</li>
+                <li>3 × Push buttons (for voting)</li>
+                <li>1 × Push button (to end voting &amp; show result)</li>
+                <li>3 × LEDs (visual vote feedback)</li>
+                <li>1 × Buzzer (confirmation sound)</li>
+                <li>Resistors: 220Ω, 1kΩ</li>
+                <li>Breadboard and jumper wires</li>
+            </ul>
 
-<hr>
+            <hr>
 
-<h2>🔌 Circuit Diagram</h2>
-<p><img src="https://github.com/namit-seth/EVM-V2/blob/main/EVM%20V2.png?raw=true" alt="Circuit Diagram" width="500"></p>
-<p><a href="https://www.tinkercad.com/things/6YQpShvm2TO-evm-v2">View on TinkerCAD</a></p>
+            <h2>Circuit & layout</h2>
+            <p><img src="https://github.com/namit-seth/EVM-V2/blob/main/EVM%20V2.png?raw=true" alt="Circuit Diagram"
+                    width="500"></p>
+            <p><a href="https://www.tinkercad.com/things/6YQpShvm2TO-evm-v2" target="_blank" rel="noopener">View on
+                    TinkerCAD</a></p>
 
-<hr>
+            <hr>
 
-<h2>💻 How It Works</h2>
-<ol>
-  <li><strong>Initialization</strong>: The LCD displays a welcome message. All vote counters are set to zero.</li>
-  <li><strong>Voting Process</strong>:
-    <ul>
-      <li>Each push button corresponds to a candidate.</li>
-      <li>On pressing a button:
-        <ul>
-          <li>The respective vote counter increases.</li>
-          <li>The LED blinks and the buzzer sounds as feedback.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Ending Voting</strong>:
-    <ul>
-      <li>Press the “Result” button to stop voting.</li>
-      <li>The LCD displays the vote count for each candidate and highlights the winner.</li>
-      <li>In case of a tie, the LCD indicates it.</li>
-    </ul>
-  </li>
-</ol>
+            <h2>How it works</h2>
+            <ol>
+                <li><strong>Initialization</strong>: The LCD shows a welcome message and sets all vote counters to
+                    zero.</li>
+                <li><strong>Voting process</strong>:
+                    <ul>
+                        <li>Each push button corresponds to a candidate.</li>
+                        <li>On press:
+                            <ul>
+                                <li>The candidate’s vote counter increments.</li>
+                                <li>The LED blinks and the buzzer emits a short tone for haptic-style feedback.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Ending voting</strong>:
+                    <ul>
+                        <li>Press the “Result” button to stop voting.</li>
+                        <li>The LCD displays total votes for each candidate and highlights the winner.</li>
+                        <li>In case of a tie, the LCD clearly indicates it.</li>
+                    </ul>
+                </li>
+            </ol>
 
-<hr>
+            <hr>
 
-<h2>🧠 Code Overview</h2>
-<p>The project logic is written in Arduino’s C-style syntax. You can find the full <code>.ino</code> file <a href="https://github.com/namit-seth/EVM-V2/blob/main/EVM_V2.ino">here</a>.</p>
+            <h2>Code overview</h2>
+            <p>The logic is written in Arduino’s C-style syntax. You can browse the full <code>.ino</code> file <a
+                    href="https://github.com/namit-seth/EVM-V2/blob/main/EVM_V2.ino" target="_blank"
+                    rel="noopener">here</a>.</p>
 
-<p><strong>Sample Logic:</strong></p>
-<pre><code>if (digitalRead(button1) == HIGH) {
+            <p><strong>Sample input handling:</strong></p>
+            <pre><code>if (digitalRead(button1) == HIGH) {
   votesA++;
   tone(buzzer, 1000, 200);
   digitalWrite(led1, HIGH);
   delay(200);
   digitalWrite(led1, LOW);
-}
-</code></pre>
+}</code></pre>
 
-<p><strong>LCD Output:</strong></p>
-<pre><code>lcd.setCursor(0, 0);
+            <p><strong>Sample LCD output:</strong></p>
+            <pre><code>lcd.setCursor(0, 0);
 lcd.print("Votes A: ");
-lcd.print(votesA);
-</code></pre>
+lcd.print(votesA);</code></pre>
 
-<hr>
+            <hr>
 
-<h2>🔍 What I Learned</h2>
-<ul>
-  <li>Basics of user interface feedback using LCD and buzzer</li>
-  <li>Debouncing and logical state detection with buttons</li>
-  <li>Real-world application of conditional logic</li>
-  <li>Hands-on practice with TinkerCAD and Arduino IDE</li>
-</ul>
+            <h2>What I learned</h2>
+            <ul>
+                <li>Designing user feedback loops with LCD, LEDs, and buzzer.</li>
+                <li>Button debouncing and reliable digital input handling.</li>
+                <li>Structuring embedded logic for clarity and maintainability.</li>
+                <li>Iterating quickly with TinkerCAD before wiring on real hardware.</li>
+            </ul>
 
-<hr>
+            <hr>
 
-<h2>📈 Future Improvements</h2>
-<ul>
-  <li>Add password-protected access to the result button</li>
-  <li>Implement EEPROM to store votes after power loss</li>
-  <li>Replace buttons with capacitive touch sensors</li>
-  <li>Add SD card logging for audit trail</li>
-</ul>
+            <h2>Future improvements</h2>
+            <ul>
+                <li>Password-protected access to the result function.</li>
+                <li>Using EEPROM to persist votes across power cycles.</li>
+                <li>Replacing mechanical buttons with capacitive touch inputs.</li>
+                <li>Adding SD card logging for an auditable vote trail.</li>
+            </ul>
 
-<hr>
+            <hr>
 
-<h2>🧑‍💻 Try It Yourself!</h2>
-<ul>
-  <li>GitHub: <a href="https://github.com/namit-seth/EVM-V2">namit-seth/EVM-V2</a></li>
-  <li>TinkerCAD: <a href="https://www.tinkercad.com/things/6YQpShvm2TO-evm-v2">EVM V2 Simulation</a></li>
-</ul>
-<p>Feel free to fork the project and add your own creative twist!</p>
-</section>
-<footer id="contact">
-        <div>
-            <h1>Namit Seth</h1>
-            <h3><a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></h3>
-            <div>
-                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank"><span><img src="/linkedin.png" alt="linkedin" height="50"></span></a>
-                <a href="https://github.com/namit-seth/" target="_blank"><span><img src="/github.png" alt="github" height="50"></span></a>
+            <h2>Try it yourself</h2>
+            <ul>
+                <li>GitHub: <a href="https://github.com/namit-seth/EVM-V2" target="_blank"
+                        rel="noopener">namit-seth/EVM-V2</a></li>
+                <li>TinkerCAD: <a href="https://www.tinkercad.com/things/6YQpShvm2TO-evm-v2" target="_blank"
+                        rel="noopener">EVM V2 Simulation</a></li>
+            </ul>
+            <p>Fork the project, explore the circuit, and customize the voting logic to your own use case.</p>
+        </article>
+
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img
+                        src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png"
+                        alt="GitHub"></a>
             </div>
         </div>
-</footer>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
 </body>
 
 </html>

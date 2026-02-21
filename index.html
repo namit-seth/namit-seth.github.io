@@ -4,131 +4,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namit Seth</title>
+    <title>Namit Seth | Electronics & Frontend</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Animation / visual libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
+
+    <script src="script.js" defer></script>
 </head>
 
 <body class="poppins-regular">
-    <header id="home">
+    <header id="home" class="site-header">
         <div id="header">
-            <a href="../"><span class="poppins-bold logo-head">NAMIT SETH</span></a>
-            <span class="poppins-regular nav-head">
-                <button class="hamburger-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
-                        fill="#000000">
+            <a href="#home" class="logo-link">
+                <span class="poppins-bold logo-head">NAMIT SETH</span>
+            </a>
+            <nav class="poppins-regular nav-head">
+                <button class="hamburger-icon" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"
+                        fill="#e5e7eb">
                         <path d="M100-207v-92.5h761v92.5H100Zm0-227.5V-526h761v91.5H100Zm0-226.5v-92.5h761v92.5H100Z" />
                     </svg>
                 </button>
-                <span id="nav">
-                    <a href="/#home"><span>HOME</span></a>
-                    <a href="/#about_para"><span>ABOUT</span></a>
-                    <a href="/#projects"><span>PROJECTS</span></a>
+                <span id="nav" class="nav-links">
+                    <a href="#home" class="nav-link" data-scroll><span>Home</span></a>
+                    <a href="#about" class="nav-link" data-scroll><span>About</span></a>
+                    <a href="#projects" class="nav-link" data-scroll><span>Projects</span></a>
+                    <a href="#tech-stack" class="nav-link" data-scroll><span>Tech Stack</span></a>
+                    <a href="#contact" class="nav-link" data-scroll><span>Contact</span></a>
                 </span>
-            </span>
+            </nav>
         </div>
     </header>
-    <section id="about" class="poppins-regular">
-        <span>
-            <h1 class="poppins-bold ">NAMIT SETH</h1>
-            <h3 class="poppins-regular">Showcasing Innovation in Electronics & Programming</h3>
-            <span class="button"><button class="poppins-bold">CONTACT</button></span></span>
-    </section>
-    <section id="about_para">
-        <p>Namit Seth is a driven BSc Electronics student at Delhi University, showcasing a strong foundation in electronics and programming. Specializing in circuit design, Arduino projects, and PCB design, Namit also possesses expertise in Python, C++, HTML, and JavaScript. As the Secretary of Electronika and Budget Head of Cesar, he has successfully led teams to execute technical events and innovative projects, including life-sized arcade games and robotics displays. With a commitment to developing efficient systems and fostering collaboration, Namit is advancing the frontiers of electronics innovation.</p>
-        <div id="Namit_image"></div>
-    </section>
-    <section id="projects">
-        <div class="project">
-            <img src="/EVM/EVM.jpg" alt="project_image" width="100%">
-            <div>
-            <h3>Electronic Voting Machine</h3>
-            <p>A simple Arduino project that simulates an electronic voting machine using push buttons, LEDs, buzzer, and LCD. Users can cast votes for three candidates, and the results are displayed on the LCD. Built for learning embedded systems and digital interfacing.</p>
-            <a href="/EVM/">Learn More..</a>
+
+    <!-- Hero / Intro -->
+    <section id="hero" class="hero-section">
+        <div id="hero-particles" class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-kicker">Electronics • Embedded • Web</p>
+                <h1 class="poppins-bold hero-title">
+                    Hi, I'm <span class="highlight">Namit</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="typed-role"></span>
+                </h2>
+                <p class="hero-description">
+                    I design and build electronics systems, embedded prototypes, and modern web interfaces that
+                    bring hardware to life with smooth, interactive experiences.
+                </p>
+                <div class="hero-actions">
+                    <button class="primary-btn" data-scroll data-target="#projects">View Projects</button>
+                    <button class="ghost-btn" data-scroll data-target="#contact">Contact Me</button>
+                </div>
+            </div>
+            <div class="hero-highlight-card tilt-card">
+                <div class="hero-highlight-grid">
+                    <div class="hero-highlight-item">
+                        <span class="metric-label">Electronics</span>
+                        <span class="metric-value">PCB • Sensors • Arduino</span>
+                    </div>
+                    <div class="hero-highlight-item">
+                        <span class="metric-label">Embedded</span>
+                        <span class="metric-value">C / C++ • Microcontrollers</span>
+                    </div>
+                    <div class="hero-highlight-item">
+                        <span class="metric-label">Web</span>
+                        <span class="metric-value">HTML • CSS • JS</span>
+                    </div>
+                </div>
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span>Open to electronics & frontend roles</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="project">
-            <img src="/Testeefy/Testeefy.jpg" alt="Project_image" width="100%">
-            <div>
-            <h3>Testeefy</h3>
-            <p>Testeefy is a simple web app where examiners create quizzes and candidates take them. Built with Flask and SQLite, it handles user login, test creation, submissions, and result tracking.
-
-</p>
-            <a href="/Testeefy/">Learn More..</a>
+    <!-- About -->
+    <section id="about" class="section about-section">
+        <div class="section-header reveal-on-scroll">
+            <p class="section-kicker">About</p>
+            <h2 class="section-title">Electronics-first engineer, web-focused creator</h2>
+            <p class="section-subtitle">
+                BSc Electronics student at Delhi University with hands-on experience in embedded systems,
+                circuit design, and intuitive web interfaces.
+            </p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal-on-scroll">
+                <p>
+                    I enjoy turning ideas into working systems at the intersection of
+                    hardware and software — from PCB layouts and Arduino builds to interactive dashboards
+                    and clean frontends.
+                </p>
+                <p>
+                    As Secretary of Electronika and Budget Head of Cesar, I've led technical teams, shipped
+                    life-sized arcade experiences, and delivered robotics showcases that are both robust and
+                    engaging.
+                </p>
+                <p>
+                    My toolkit spans circuit design, embedded programming, and web technologies like HTML,
+                    CSS, and JavaScript — letting me prototype everything from sensor-driven devices to
+                    browser-based interfaces that visualize data from the real world.
+                </p>
+            </div>
+            <div class="about-visual reveal-on-scroll">
+                <div id="Namit_image" class="about-photo tilt-card"></div>
+                <div class="about-meta-card">
+                    <div class="about-meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Embedded systems • Human-friendly UIs</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-label">Strengths</span>
+                        <span class="meta-value">Hardware debugging • Rapid prototyping • Visual polish</span>
+                    </div>
+                    <div class="about-meta-item">
+                        <span class="meta-label">Currently exploring</span>
+                        <span class="meta-value">IoT dashboards & data-driven interfaces</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <footer id="contact">
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSeauhCvQ_ycd1NqGHWDDoScLqWOG4wTKc97wzDUkBSlDS_2xw/formResponse"
-      target="_self"
-      id="bootstrapForm"
-      method="POST">
-    <fieldset>
-        <h2>Contact Information<br><small></small></h2>
-    </fieldset>
 
-
-    <!-- Field type: "short" id: "1633920210" -->
-    <fieldset>
-        <legend for="1633920210">Name</legend>
-        <div class="form-group">
-            <input id="2005620554" type="text" name="entry.2005620554" class="form-control" >
+    <!-- Skills -->
+    <section id="skills" class="section skills-section">
+        <div class="section-header reveal-on-scroll">
+            <p class="section-kicker">Skills</p>
+            <h2 class="section-title">Core capabilities</h2>
+            <p class="section-subtitle">
+                A blend of electronics engineering fundamentals and modern frontend craftsmanship.
+            </p>
         </div>
-    </fieldset>
-
-
-    <!-- Field type: "short" id: "227649005" -->
-    <fieldset>
-        <legend for="227649005">Email</legend>
-        <div class="form-group">
-            <input id="1045781291" type="text" name="entry.1045781291" class="form-control" >
-        </div>
-    </fieldset>
-
-
-    <!-- Field type: "short" id: "1770822543" -->
-    <fieldset>
-        <legend for="1770822543">Phone number</legend>
-        <div class="form-group">
-            <input id="1166974658" type="text" name="entry.1166974658" class="form-control" >
-        </div>
-    </fieldset>
-
-
-    <!-- Field type: "paragraph" id: "1846923513" -->
-    <fieldset>
-        <legend for="1846923513">Message</legend>
-        <div class="form-group">
-            <textarea id="839337160" name="entry.839337160" class="form-control" ></textarea>
-        </div>
-    </fieldset>
-
-    <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="8197509122644349644">
-    <!--
-        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-    -->
-    <input type="hidden" name="pageHistory" value="0">
-
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
-
-        <div>
-            <h1>Namit Seth</h1>
-            <h3><a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></h3>
-            <div>
-                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank"><span><img src="/linkedin.png" alt="linkedin" height="50"></span></a>
-                <a href="https://github.com/namit-seth/" target="_blank"><span><img src="/github.png" alt="github" height="50"></span></a>
+        <div class="skills-grid">
+            <div class="skills-column reveal-on-scroll">
+                <h3 class="skills-heading">Electronics & Embedded</h3>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>Arduino / Microcontrollers</span>
+                        <span class="skill-value">90%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="90"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>Circuit Design & PCB</span>
+                        <span class="skill-value">85%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="85"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>Sensors & Actuators</span>
+                        <span class="skill-value">80%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="80"></div>
+                    </div>
+                </div>
             </div>
+            <div class="skills-column reveal-on-scroll">
+                <h3 class="skills-heading">Programming & Web</h3>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>Python / C++</span>
+                        <span class="skill-value">85%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="85"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>HTML • CSS • JS</span>
+                        <span class="skill-value">90%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="90"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>UI / UX & Layout</span>
+                        <span class="skill-value">80%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar-fill" data-skill="80"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-column skills-pulse-card reveal-on-scroll">
+                <h3 class="skills-heading">How I work</h3>
+                <ul class="skills-list">
+                    <li>Prototype hardware quickly, validate, then refine.</li>
+                    <li>Design interfaces that explain complex systems visually.</li>
+                    <li>Use data and real-world constraints to guide design decisions.</li>
+                    <li>Communicate clearly across technical and non-technical teams.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects-section">
+        <div class="section-header reveal-on-scroll">
+            <p class="section-kicker">Projects</p>
+            <h2 class="section-title">Hardware builds & web experiences</h2>
+            <p class="section-subtitle">
+                Selected work across embedded systems and frontend development.
+            </p>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card tilt-card reveal-on-scroll" data-project="evm">
+                <div class="project-media">
+                    <img src="EVM/EVM.jpg" alt="Electronic Voting Machine project image">
+                    <span class="project-tag">Embedded • Hardware UI</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Electronic Voting Machine</h3>
+                    <p class="project-summary">
+                        Arduino-powered electronic voting machine using push buttons, LEDs, a buzzer, and LCD
+                        to simulate secure vote casting and live tally display.
+                    </p>
+                    <div class="project-meta">
+                        <span>Arduino</span>
+                        <span>LCD</span>
+                        <span>Digital Logic</span>
+                    </div>
+                    <button class="project-toggle" aria-expanded="false">View details</button>
+                    <div class="project-details">
+                        <p>
+                            Designed a simple but complete voting flow: candidate selection, confirmation feedback,
+                            and results visualization on the LCD. Focused on clear user feedback using LEDs and
+                            buzzer cues, while keeping wiring and code maintainable for future iterations.
+                        </p>
+                        <a href="/EVM/" class="project-link" target="_blank" rel="noopener">Open project</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card tilt-card reveal-on-scroll" data-project="testeefy">
+                <div class="project-media">
+                    <img src="Testeefy/Testeefy.jpg" alt="Testeefy quiz web app preview">
+                    <span class="project-tag">Web App • Assessment</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Testeefy</h3>
+                    <p class="project-summary">
+                        A quiz platform where examiners create tests and candidates take them, with login,
+                        attempts, and result tracking.
+                    </p>
+                    <div class="project-meta">
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>Frontend UX</span>
+                    </div>
+                    <button class="project-toggle" aria-expanded="false">View details</button>
+                    <div class="project-details">
+                        <p>
+                            Built lightweight flows for exam creation, candidate assignments, submissions, and
+                            results, focusing on a clean, distraction-free interface that works reliably on
+                            low-resource machines and inconsistent networks.
+                        </p>
+                        <a href="Testeefy/" class="project-link" target="_blank" rel="noopener">Open project</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card tilt-card reveal-on-scroll" data-project="club">
+                <div class="project-media">
+                    <div class="project-placeholder">
+                        <span class="project-placeholder-label">Club & Event Builds</span>
+                    </div>
+                    <span class="project-tag">Experiential • Robotics</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Interactive club installations</h3>
+                    <p class="project-summary">
+                        Technical leadership for life-sized arcade-style experiences and robotics showcases for
+                        Electronika and Cesar events.
+                    </p>
+                    <div class="project-meta">
+                        <span>Team Leadership</span>
+                        <span>Prototyping</span>
+                        <span>Experience Design</span>
+                    </div>
+                    <button class="project-toggle" aria-expanded="false">View details</button>
+                    <div class="project-details">
+                        <p>
+                            Coordinated hardware design, wiring, and on-site debugging for installations that had
+                            to run reliably for hours under heavy use. Designed control panels and visual feedback
+                            so non-technical attendees could intuitively interact with complex systems.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech-stack" class="section tech-section">
+        <div class="section-header reveal-on-scroll">
+            <p class="section-kicker">Tech Stack</p>
+            <h2 class="section-title">Tools that power my builds</h2>
+        </div>
+        <div class="tech-carousel-wrapper reveal-on-scroll">
+            <div class="tech-carousel" aria-hidden="true">
+                <div class="tech-pill group-embedded">Arduino</div>
+                <div class="tech-pill group-embedded">ATmega</div>
+                <div class="tech-pill group-embedded">ESP-based boards</div>
+                <div class="tech-pill group-sensors">Ultrasonic sensors</div>
+                <div class="tech-pill group-sensors">IR modules</div>
+                <div class="tech-pill group-sensors">Temperature sensors</div>
+                <div class="tech-pill group-pcb">Breadboard prototyping</div>
+                <div class="tech-pill group-pcb">PCB layout tools</div>
+                <div class="tech-pill group-web">HTML</div>
+                <div class="tech-pill group-web">CSS</div>
+                <div class="tech-pill group-web">JavaScript</div>
+                <div class="tech-pill group-web">Flask</div>
+                <div class="tech-pill group-web">SQLite</div>
+            </div>
+        </div>
+        <div class="tech-legend reveal-on-scroll">
+            <div class="tech-legend-item">
+                <span class="legend-color legend-embedded"></span>
+                <span>Embedded</span>
+            </div>
+            <div class="tech-legend-item">
+                <span class="legend-color legend-sensors"></span>
+                <span>Sensors</span>
+            </div>
+            <div class="tech-legend-item">
+                <span class="legend-color legend-pcb"></span>
+                <span>Prototyping & PCB</span>
+            </div>
+            <div class="tech-legend-item">
+                <span class="legend-color legend-web"></span>
+                <span>Web & Apps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="section contact-section">
+        <div class="contact-grid">
+            <div class="contact-intro reveal-on-scroll">
+                <p class="section-kicker">Contact</p>
+                <h2 class="section-title">Let’s build something together</h2>
+                <p class="section-subtitle">
+                    Whether it's an embedded prototype, an electronics-heavy installation, or a frontend that
+                    visualizes hardware data — I'm excited to collaborate.
+                </p>
+                <div class="contact-meta">
+                    <p><strong>Email:</strong> <a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener">
+                            <span><img src="linkedin.png" alt="LinkedIn" height="40"></span>
+                        </a>
+                        <a href="https://github.com/namit-seth/" target="_blank" rel="noopener">
+                            <span><img src="github.png" alt="GitHub" height="40"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper reveal-on-scroll">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeauhCvQ_ycd1NqGHWDDoScLqWOG4wTKc97wzDUkBSlDS_2xw/formResponse"
+                    target="_self" id="bootstrapForm" method="POST" class="contact-form">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="2005620554">Name</label>
+                        <div class="form-group">
+                            <input id="2005620554" type="text" name="entry.2005620554" class="form-control" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="1045781291">Email</label>
+                        <div class="form-group">
+                            <input id="1045781291" type="email" name="entry.1045781291" class="form-control" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="1166974658">Phone number</label>
+                        <div class="form-group">
+                            <input id="1166974658" type="tel" name="entry.1166974658" class="form-control">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="839337160">Message</label>
+                        <div class="form-group">
+                            <textarea id="839337160" name="entry.839337160" class="form-control" rows="4"
+                                required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <input type="hidden" name="fvv" value="1">
+                    <input type="hidden" name="fbzx" value="8197509122644349644">
+                    <input type="hidden" name="pageHistory" value="0">
+
+                    <button class="primary-btn contact-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-meta">
+            <span>© <span id="year"></span> Namit Seth. All rights reserved.</span>
         </div>
     </footer>
 </body>

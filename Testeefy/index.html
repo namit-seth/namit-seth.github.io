@@ -4,133 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namit Seth</title>
+    <title>Testeefy | Quiz Platform</title>
     <link rel="stylesheet" href="../Blog_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </head>
 
 <body class="poppins-regular">
     <header id="home">
         <div id="header">
-            <a href="../"><span class="poppins-bold logo-head">NAMIT SETH</span></a>
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
         </div>
     </header>
-    <section>
-        <h1>🧠 Testeefy – A Quiz Creation and Assessment Platform</h1>
 
-<p><strong>Author</strong>: Namit Seth<br>
-🎥 <strong>Video Demo</strong>: <a href="https://youtu.be/c4Bd9kE2ClI">YouTube Demo</a><br>
-💻 <strong>GitHub Repo</strong>: <a href="https://github.com/namit-seth/testeefy">Testeefy on GitHub</a></p>
+    <main class="page-shell">
+        <section class="blog-hero">
+            <p class="blog-kicker">Project case study</p>
+            <h1 class="blog-title">Testeefy – A Quiz Creation and Assessment Platform</h1>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">Electronics &amp; Web</span>
+            </div>
+        </section>
 
-<hr>
+        <article class="blog-card">
+            <p><strong>Testeefy</strong> is a web-based quiz platform built using <strong>Flask</strong> and
+                <strong>SQLite</strong> that allows <em>examiners</em> to create topic-wise tests and
+                <em>candidates</em> to attempt them. It mimics a lightweight online testing system, complete with user
+                authentication, dynamic question creation, and automated result evaluation.</p>
+            <p>Whether you're an educator creating tests or a learner checking your knowledge, Testeefy simplifies the
+                process.</p>
 
-<h2>📘 Introduction</h2>
-<p><strong>Testeefy</strong> is a web-based quiz platform built using <strong>Flask</strong> and <strong>SQLite</strong> that allows <em>examiners</em> to create topic-wise tests and <em>candidates</em> to attempt them. It mimics a lightweight online testing system, complete with user authentication, dynamic question creation, and automated result evaluation.</p>
-<p>Whether you're an educator creating tests or a learner checking your knowledge, Testeefy simplifies the process.</p>
+            <hr>
 
-<hr>
+            <h2>Tech stack</h2>
+            <ul>
+                <li><strong>Backend</strong>: Python (Flask)</li>
+                <li><strong>Frontend</strong>: HTML + Jinja Templates</li>
+                <li><strong>Database</strong>: SQLite</li>
+                <li><strong>Sessions</strong>: Flask-Session</li>
+                <li><strong>Styling &amp; Assets</strong>: Static folder (CSS, JS, Images)</li>
+            </ul>
 
-<h2>🧱 Tech Stack</h2>
-<ul>
-  <li><strong>Backend</strong>: Python (Flask)</li>
-  <li><strong>Frontend</strong>: HTML + Jinja Templates</li>
-  <li><strong>Database</strong>: SQLite</li>
-  <li><strong>Sessions</strong>: Flask-Session</li>
-  <li><strong>Styling & Assets</strong>: Static folder (CSS, JS, Images)</li>
-</ul>
+            <hr>
 
-<hr>
+            <h2>Key features</h2>
+            <ul>
+                <li>User registration &amp; login</li>
+                <li>Role-based access: Examiners vs. Candidates</li>
+                <li>Test creation with multiple questions and options</li>
+                <li>Support for marking correct/incorrect answers</li>
+                <li>Automatic result calculation &amp; storage</li>
+                <li>View results and past attempts</li>
+            </ul>
 
-<h2>🔩 Key Features</h2>
-<ul>
-  <li>User registration & login</li>
-  <li>Role-based access: Examiners vs. Candidates</li>
-  <li>Test creation with multiple questions and options</li>
-  <li>Support for marking correct/incorrect answers</li>
-  <li>Automatic result calculation & storage</li>
-  <li>View results and past attempts</li>
-</ul>
+            <hr>
 
-<hr>
+            <h2>Project structure</h2>
+            <ul>
+                <li><code>app.py</code>: Flask application logic &amp; route handling</li>
+                <li><code>helpers.py</code>: Shared utility functions (e.g. login check, error display)</li>
+                <li><code>Project.db</code>: SQLite database storing users, tests, questions, and attempts</li>
+                <li><code>templates/</code>: HTML pages rendered dynamically</li>
+                <li><code>static/</code>: CSS, JS, and media assets</li>
+            </ul>
 
-<h2>📂 Project Structure</h2>
-<ul>
-  <li><code>app.py</code>: Flask application logic & route handling</li>
-  <li><code>helpers.py</code>: Shared utility functions (e.g. login check, error display)</li>
-  <li><code>Project.db</code>: SQLite database storing users, tests, questions, and attempts</li>
-  <li><code>templates/</code>: HTML pages rendered dynamically</li>
-  <li><code>static/</code>: CSS, JS, and media assets</li>
-</ul>
+            <hr>
 
-<hr>
+            <h2>Core routes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>/</code></td>
+                        <td>Home page – overview of the app</td>
+                    </tr>
+                    <tr>
+                        <td><code>/login/</code></td>
+                        <td>User login page</td>
+                    </tr>
+                    <tr>
+                        <td><code>/register/</code></td>
+                        <td>New user registration</td>
+                    </tr>
+                    <tr>
+                        <td><code>/logout/</code></td>
+                        <td>Logs out the current user</td>
+                    </tr>
+                    <tr>
+                        <td><code>/tests/</code></td>
+                        <td>Shows subjects or created tests based on user role</td>
+                    </tr>
+                    <tr>
+                        <td><code>/test/create/</code></td>
+                        <td>Allows examiner to create a new test</td>
+                    </tr>
+                    <tr>
+                        <td><code>/tests/&lt;subject&gt;</code></td>
+                        <td>Displays all tests under a subject</td>
+                    </tr>
+                    <tr>
+                        <td><code>/test?id=&lt;test_id&gt;</code></td>
+                        <td>Candidate test attempt page</td>
+                    </tr>
+                    <tr>
+                        <td><code>/test/submit</code></td>
+                        <td>Submits answers and calculates score</td>
+                    </tr>
+                    <tr>
+                        <td><code>/result</code></td>
+                        <td>Displays attempted test results</td>
+                    </tr>
+                    <tr>
+                        <td><code>/attempt?result_id=&lt;id&gt;</code></td>
+                        <td>View past attempt details</td>
+                    </tr>
+                </tbody>
+            </table>
 
-<h2>🔗 Core Routes</h2>
-<table>
-  <thead>
-    <tr><th>Route</th><th>Description</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>/</code></td><td>Home page – overview of the app</td></tr>
-    <tr><td><code>/login/</code></td><td>User login page</td></tr>
-    <tr><td><code>/register/</code></td><td>New user registration</td></tr>
-    <tr><td><code>/logout/</code></td><td>Logs out the current user</td></tr>
-    <tr><td><code>/tests/</code></td><td>Shows subjects or created tests based on user role</td></tr>
-    <tr><td><code>/test/create/</code></td><td>Allows examiner to create a new test</td></tr>
-    <tr><td><code>/tests/&lt;subject&gt;</code></td><td>Displays all tests under a subject</td></tr>
-    <tr><td><code>/test?id=&lt;test_id&gt;</code></td><td>Candidate test attempt page</td></tr>
-    <tr><td><code>/test/submit</code></td><td>Submits answers and calculates score</td></tr>
-    <tr><td><code>/result</code></td><td>Displays attempted test results</td></tr>
-    <tr><td><code>/attempt?result_id=&lt;id&gt;</code></td><td>View past attempt details</td></tr>
-  </tbody>
-</table>
+            <hr>
 
-<hr>
+            <h2>How it works</h2>
+            <ol>
+                <li><strong>User Registration</strong> – Users choose between "Candidate" or "Examiner" roles.</li>
+                <li><strong>Examiners</strong> – Can create tests by adding questions and marking correct answers.</li>
+                <li><strong>Candidates</strong> – Select a subject, choose a test, and answer MCQs.</li>
+                <li><strong>Submission</strong> – Test data is validated, scored, and stored in the database.</li>
+                <li><strong>Results</strong> – Users can view scores and detailed attempt history.</li>
+            </ol>
 
-<h2>💡 How It Works</h2>
-<ol>
-  <li><strong>User Registration</strong> – Users choose between "Candidate" or "Examiner" roles.</li>
-  <li><strong>Examiners</strong> – Can create tests by adding questions and marking correct answers.</li>
-  <li><strong>Candidates</strong> – Select a subject, choose a test, and answer MCQs.</li>
-  <li><strong>Submission</strong> – Test data is validated, scored, and stored in the database.</li>
-  <li><strong>Results</strong> – Users can view scores and detailed attempt history.</li>
-</ol>
+            <hr>
 
-<hr>
+            <h2>Future enhancements</h2>
+            <ul>
+                <li>Timer-based tests</li>
+                <li>Leaderboard and analytics</li>
+                <li>Email notifications</li>
+                <li>Question banks with difficulty tagging</li>
+                <li>More responsive templates for mobile users</li>
+            </ul>
 
-<h2>🎯 Future Enhancements</h2>
-<ul>
-  <li>Timer-based tests</li>
-  <li>Leaderboard and analytics</li>
-  <li>Email notifications</li>
-  <li>Question banks with difficulty tagging</li>
-  <li>Mobile-responsive UI</li>
-</ul>
+            <hr>
 
-<hr>
+            <h2>Try it yourself</h2>
+            <ul>
+                <li><strong>GitHub</strong>: <a href="https://github.com/namit-seth/testeefy" target="_blank"
+                        rel="noopener">namit-seth/testeefy</a></li>
+                <li><strong>Video Demo</strong>: <a href="https://youtu.be/c4Bd9kE2ClI" target="_blank"
+                        rel="noopener">Click to Watch</a></li>
+            </ul>
+            <p>Fork the repo, run the app locally, and start building your own tests today!</p>
+        </article>
 
-<h2>🚀 Try It Yourself</h2>
-<ul>
-  <li><strong>GitHub</strong>: <a href="https://github.com/namit-seth/testeefy">namit-seth/testeefy</a></li>
-  <li><strong>Video Demo</strong>: <a href="https://youtu.be/c4Bd9kE2ClI">Click to Watch</a></li>
-</ul>
-<p>Fork the repo, run the app locally, and start building your own tests today!</p>
-
-    </section>
-<footer id="contact">
-        <div>
-            <h1>Namit Seth</h1>
-            <h3><a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></h3>
-            <div>
-                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank"><span><img src="/linkedin.png" alt="linkedin" height="50"></span></a>
-                <a href="https://github.com/namit-seth/" target="_blank"><span><img src="/github.png" alt="github" height="50"></span></a>
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img
+                        src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png"
+                        alt="GitHub"></a>
             </div>
         </div>
-</footer>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
 </body>
 
 </html>
