@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS1302 RTC Interface | Namit Seth</title>
+    <link rel="stylesheet" href="../Blog_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="poppins-regular">
+    <header id="home">
+        <div id="header">
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <!-- Hero / project banner with provided image -->
+        <section class="blog-hero">
+            <div class="project-banner">
+                <img src="DS1302.jpg" alt="DS1302 RTC Interface">
+            </div>
+            <p class="blog-kicker">Electronics · Embedded</p>
+            <h1 class="blog-title">DS1302 RTC Interface</h1>
+            <p class="blog-subtitle">Real Time Clock Integration for Embedded Systems</p>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">Arduino · RTC</span>
+                <a href="https://github.com/namit-seth/DS1302" class="blog-meta-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+
+        <article class="blog-card">
+            <!-- Project Overview -->
+            <h2>Project Overview</h2>
+            <p>
+                This project demonstrates how to interface the <strong>DS1302 Real Time Clock (RTC)</strong> module
+                with a microcontroller for maintaining persistent time and date. The DS1302 is a low-power serial
+                real-time clock with a simple 3-wire interface, making it well-suited for Arduino and other
+                embedded systems where accurate timekeeping is needed across power cycles.
+            </p>
+
+            <hr>
+
+            <!-- Hardware Used -->
+            <h2>Hardware Used</h2>
+            <ul>
+                <li><strong>DS1302 RTC module</strong> — Real-time clock IC with battery-backed SRAM</li>
+                <li><strong>Microcontroller</strong> — Arduino or compatible board (e.g. Arduino Uno, Nano)</li>
+                <li><strong>Crystal oscillator</strong> — 32.768 kHz (typically on the RTC module)</li>
+                <li><strong>Backup battery</strong> — Coin cell (e.g. CR2032) for time retention when power is off</li>
+                <li><strong>Breadboard and jumper wires</strong> — For prototyping and connections</li>
+            </ul>
+
+            <hr>
+
+            <!-- Working Principle -->
+            <h2>Working Principle</h2>
+            <p>
+                The DS1302 communicates via a <strong>3-wire serial interface</strong> (data, clock, and chip select),
+                which keeps pin usage low on the microcontroller. Time and date (seconds, minutes, hours, day, month, year)
+                are stored in internal RTC registers and can be read or written by the host. A <strong>backup battery</strong>
+                keeps the RTC running and maintains the time during power loss, so the system can resume with the correct
+                time when power is restored.
+            </p>
+
+            <hr>
+
+            <!-- Code Implementation -->
+            <h2>Code Implementation</h2>
+            <p>
+                The firmware typically covers: <strong>RTC initialization</strong>, <strong>setting the time</strong>
+                (e.g. once on first run or via serial command), <strong>reading the time</strong> from the RTC
+                registers, and <strong>displaying or using</strong> the time in the rest of the embedded project
+                (e.g. on an LCD, for logging, or for scheduling).
+            </p>
+
+            <p><strong>Typical flow — initialization and pin setup:</strong></p>
+            <pre><code>#include &lt;RTClib.h&gt;  // or DS1302 library
+
+#define RTC_CLK  5
+#define RTC_DAT  6
+#define RTC_RST  7
+
+void setup() {
+  Serial.begin(9600);
+  rtc.begin();
+  // Optional: set time once if not already set
+  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+}</code></pre>
+
+            <p><strong>Reading and using the current time:</strong></p>
+            <pre><code>void loop() {
+  DateTime now = rtc.now();
+  // Display or use: now.year(), now.month(), now.day()
+  //                 now.hour(), now.minute(), now.second()
+  Serial.print(now.year()); Serial.print("/");
+  Serial.print(now.month()); Serial.print("/");
+  Serial.println(now.day());
+  delay(1000);
+}</code></pre>
+
+            <hr>
+
+            <!-- Applications -->
+            <h2>Applications</h2>
+            <ul>
+                <li><strong>Digital clocks</strong> — Standalone or with LCD/OLED display</li>
+                <li><strong>Data logging systems</strong> — Timestamping sensor data to SD card or serial</li>
+                <li><strong>Embedded scheduling systems</strong> — Triggering events at specific times</li>
+                <li><strong>Automation projects</strong> — Time-based switching, alarms, or reminders</li>
+            </ul>
+
+            <hr>
+
+            <!-- GitHub Section -->
+            <h2>Source Code</h2>
+            <p>
+                Full schematics, wiring notes, and example code are available in the repository.
+            </p>
+            <a href="https://github.com/namit-seth/DS1302" class="blog-cta-button" target="_blank" rel="noopener">
+                View Full Project on GitHub
+            </a>
+        </article>
+
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+
+</html>
