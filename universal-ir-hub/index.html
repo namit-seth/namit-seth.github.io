@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal IR Hub | Namit Seth</title>
+    <link rel="stylesheet" href="../Blog_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="poppins-regular">
+    <header id="home">
+        <div id="header">
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="blog-hero">
+            <div class="project-banner">
+                <img src="image.png" alt="Universal IR Hub">
+            </div>
+            <p class="blog-kicker">IoT · Firmware · Embedded</p>
+            <h1 class="blog-title">Universal IR Hub</h1>
+            <p class="blog-subtitle">ESP8266 firmware for decoding NEC infrared commands and home automation control</p>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">ESP8266 · C++</span>
+                <a href="https://github.com/namit-seth/Universal-IR-hub" class="blog-meta-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+
+        <article class="blog-card">
+            <h2>Project Overview</h2>
+            <p>
+                The Universal IR Hub is an ESP8266-based system built to interpret and relay infrared remote
+                control signals, especially undocumented NEC protocol payloads, into a smart home control flow.
+            </p>
+
+            <hr>
+
+            <h2>Core capabilities</h2>
+            <ul>
+                <li>Reverse-engineered undocumented NEC IR payloads for broad device compatibility.</li>
+                <li>Custom firmware optimized for memory-limited ESP8266 hardware.</li>
+                <li>Integration with smart home ecosystems via Sinric Pro.</li>
+                <li>Support for remote commands without reliance on common IR libraries.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Technology used</h2>
+            <ul>
+                <li>ESP8266 microcontroller</li>
+                <li>C++ firmware</li>
+                <li>NEC infrared protocol decoding</li>
+                <li>Sinric Pro / smart home MQTT-style bridge</li>
+            </ul>
+
+            <hr>
+
+            <h2>Implementation details</h2>
+            <p>
+                The project includes a custom IR decoding engine that processes raw NEC payloads, eliminates the
+                need for generic IR libraries, and preserves memory by handling the protocol in a lightweight,
+                register-efficient way.
+            </p>
+
+            <p><strong>Example behavior:</strong> the hub can identify a button press, filter invalid pulses, and
+                publish a standard payload to the home automation gateway.</p>
+
+            <hr>
+
+            <h2>What I learned</h2>
+            <ul>
+                <li>Working with undocumented protocol patterns and signal timing.</li>
+                <li>Writing embedded firmware for constrained memory environments.</li>
+                <li>Bridging legacy hardware controls into modern smart-home services.</li>
+                <li>Testing IR signal reliability across different remotes.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Source code</h2>
+            <p>Full firmware and integration docs are available on GitHub.</p>
+            <a href="https://github.com/namit-seth/Universal-IR-hub" class="blog-cta-button" target="_blank" rel="noopener">
+                View Full Project on GitHub
+            </a>
+        </article>
+
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+
+</html>

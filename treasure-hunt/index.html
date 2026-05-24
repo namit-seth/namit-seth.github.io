@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Multiplayer Treasure Hunt | Namit Seth</title>
+    <link rel="stylesheet" href="../Blog_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="poppins-regular">
+    <header id="home">
+        <div id="header">
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="blog-hero">
+            <div class="project-banner">
+                <img src="image.jpg" alt="Live Multiplayer Treasure Hunt Game">
+            </div>
+            <p class="blog-kicker">Web App · Real-Time · Multiplayer</p>
+            <h1 class="blog-title">Live Multiplayer Treasure Hunt Game</h1>
+            <p class="blog-subtitle">A Flask-based web app for competitive team events with live play and persistent scoring</p>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">Flask · SQL</span>
+                <a href="https://github.com/namit-seth/treasure-hunt" class="blog-meta-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+
+        <article class="blog-card">
+            <h2>Project Overview</h2>
+            <p>
+                This project is a real-time web-based treasure hunt platform built in <strong>Flask</strong> with
+                <strong>SQLite</strong> persistence. It supports multiple concurrent teams, live clue delivery, and
+                structured score tracking for event-based gameplay.
+            </p>
+
+            <hr>
+
+            <h2>Core features</h2>
+            <ul>
+                <li>Team-based gameplay for up to 10 concurrent groups.</li>
+                <li>Live clue and challenge delivery via web sessions.</li>
+                <li>Score and time tracking stored in the database.</li>
+                <li>Session stability for simultaneous player interactions.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Technical stack</h2>
+            <ul>
+                <li>Backend: Python Flask</li>
+                <li>Database: SQLite</li>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Session management: Flask sessions</li>
+            </ul>
+
+            <hr>
+
+            <h2>Challenges solved</h2>
+            <ul>
+                <li>Prevented database locks during simultaneous login and progress updates.</li>
+                <li>Maintained consistent game state for every active team.</li>
+                <li>Handled result calculations and leaderboard updates safely.</li>
+            </ul>
+
+            <hr>
+
+            <h2>What I learned</h2>
+            <ul>
+                <li>Managing concurrent users in a lightweight Flask app.</li>
+                <li>Resolving race conditions in SQL transactions.</li>
+                <li>Designing game flows that feel immediate and fair to all teams.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Source code</h2>
+            <p>Full project source, configuration, and deployment instructions are available on GitHub.</p>
+            <a href="https://github.com/namit-seth/treasure-hunt" class="blog-cta-button" target="_blank" rel="noopener">
+                View Full Project on GitHub
+            </a>
+        </article>
+
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+
+</html>

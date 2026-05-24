@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATmega32 Development Board | Namit Seth</title>
+    <link rel="stylesheet" href="../Blog_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="poppins-regular">
+    <header id="home">
+        <div id="header">
+            <a href="../" class="poppins-bold logo-head">NAMIT SETH</a>
+            <a href="../#projects" class="back-link">Back to projects</a>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="blog-hero">
+            <div class="project-banner">
+                <img src="image.jpg" alt="ATmega32 Development Board">
+            </div>
+            <p class="blog-kicker">PCB Design · Embedded Hardware</p>
+            <h1 class="blog-title">ATmega32 Development Board</h1>
+            <p class="blog-subtitle">Custom development board designed for rapid microcontroller prototyping</p>
+            <div class="blog-meta">
+                <span><strong>Author</strong> · Namit Seth</span>
+                <span class="blog-meta-dot">KiCad · PCB Design</span>
+                <a href="https://github.com/namit-seth/ATmega32-Development-Board" class="blog-meta-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+
+        <article class="blog-card">
+            <h2>Project Overview</h2>
+            <p>
+                This project documents the design and fabrication of a custom <strong>ATmega32 development board</strong>.
+                It includes a complete schematic, PCB layout, and prototyping features that simplify firmware testing
+                for AVR-based embedded systems.
+            </p>
+
+            <hr>
+
+            <h2>What was built</h2>
+            <ul>
+                <li>A compact PCB for the ATmega32 microcontroller.</li>
+                <li>ICSP programming header for direct firmware flashing.</li>
+                <li>Power regulation and decoupling for stable operation.</li>
+                <li>An op-amp based 2.5V reference for analog diagnostics.</li>
+                <li>Bi-directional LED array for visual I/O debugging.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Skills applied</h2>
+            <ul>
+                <li>PCB schematic capture and board layout in KiCad.</li>
+                <li>Power rail design and noise reduction.</li>
+                <li>Microcontroller pin management for headers and debug signals.</li>
+                <li>PCB manufacturing readiness and assembly planning.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Key features</h2>
+            <ul>
+                <li>ICSP interface for AVR programming with a USBasp or similar programmer.</li>
+                <li>Dedicated power supply pins for VCC, GND, and reset circuits.</li>
+                <li>LED array for live monitoring of port state changes.</li>
+                <li>Provision for optional expansion circuits and external sensors.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Outcomes</h2>
+            <p>
+                The finished board provides a stable foundation for building ATmega32-based
+                projects, reducing the time spent on breadboard wiring and allowing the focus to stay on firmware
+                development.
+            </p>
+
+            <hr>
+
+            <h2>Source code</h2>
+            <p>Full design files and documentation are available on GitHub.</p>
+            <a href="https://github.com/namit-seth/ATmega32-Development-Board" class="blog-cta-button" target="_blank" rel="noopener">
+                View Full Project on GitHub
+            </a>
+        </article>
+
+        <div class="blog-footer">
+            <span>© <span id="year"></span> Namit Seth</span>
+            <div class="blog-footer-links">
+                <a href="mailto:sethnamit2006@gmail.com"><img src="../github.png" alt="Email icon"></a>
+                <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener"><img src="../linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/namit-seth/" target="_blank" rel="noopener"><img src="../github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+
+</html>
