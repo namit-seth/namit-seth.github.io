@@ -168,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
       strings: [
         'Electronics Engineer',
         'Embedded Systems Builder',
-        'Frontend Web Designer',
         'Hardware–Software Integrator'
       ],
       typeSpeed: 55,
