@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /Resume_Namit_Seth.pdf

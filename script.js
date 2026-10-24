@@ -237,6 +237,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Contact details are not in the HTML source; they are assembled only on a user click,
+  // so scrapers that just read the markup never see the email address or the resume link.
+  document.querySelectorAll('[data-email]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const addr = atob('c2V0aG5hbWl0MjAwNkBnbWFpbC5jb20=');
+      el.textContent = addr;
+      el.setAttribute('href', 'mailto:' + addr);
+      el.removeAttribute('data-email');
+    }, { once: true });
+  });
+
+  document.querySelectorAll('[data-resume]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      const file = atob('UmVzdW1lX05hbWl0X1NldGgucGRm');
+      const a = document.createElement('a');
+      a.href = file;
+      a.download = file;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  });
+
   // Dynamic year in footer.
   const yearSpan = document.getElementById('year');
   if (yearSpan) {

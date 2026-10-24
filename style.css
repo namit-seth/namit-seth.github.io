@@ -382,7 +382,7 @@ button {
   border-radius: 1.4rem;
   background-image: url("Namit.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 50% 15%; /* face sits in the upper part of the photo */
   background-repeat: no-repeat;
   border: 1px solid rgba(148, 163, 184, 0.5);
   box-shadow: 0 24px 50px rgba(15, 23, 42, 0.9);
@@ -961,6 +961,152 @@ button {
     padding-top: 5rem;
   }
 
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #Namit_image {
+    height: 240px;
+  }
+}
+/* Experience */
+
+.experience-section {
+  padding-top: 4rem;
+  padding-bottom: 4.5rem;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 1.5rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.timeline-date {
+  color: #22d3ee;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding-top: 1.5rem;
+}
+
+.timeline-card {
+  border-radius: 1.2rem;
+  padding: 1.5rem 1.6rem;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.88));
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 22px 40px rgba(15, 23, 42, 0.9);
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.timeline-org {
+  margin: 0.2rem 0 0.8rem;
+  color: #a5b4fc;
+  font-size: 0.88rem;
+}
+
+.timeline-date-inline {
+  margin: 0;
+  color: #22d3ee;
+  font-size: 0.85rem;
+}
+
+.timeline-kicker {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: #22d3ee;
+}
+
+.timeline-list {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.timeline-list li + li {
+  margin-top: 0.5rem;
+}
+
+.timeline-text {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.edu-lead-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.lead-item + .lead-item {
+  margin-top: 1.2rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tags span {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 0.82rem;
+  color: #e5e7eb;
+}
+
+@media only screen and (max-width: 900px) {
+  .timeline-item,
+  .edu-lead-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timeline-date {
+    padding-top: 0;
+  }
+}
+
+/* Collapse the nav into the hamburger menu before the links get cramped */
+
+.logo-head,
+.nav-link {
+  white-space: nowrap;
+}
+
+.nav-links {
+  gap: clamp(0.9rem, 1.6vw, 1.5rem);
+}
+
+@media only screen and (max-width: 1050px) {
   .nav-links {
     position: absolute;
     inset-inline: 0;
@@ -985,17 +1131,5 @@ button {
 
   .hamburger-icon {
     display: inline-flex;
-  }
-
-  .projects-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .skills-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  #Namit_image {
-    height: 240px;
   }
 }

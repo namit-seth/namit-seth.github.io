@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, noarchive">
     <title>Namit Seth | Electronics & Frontend</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +36,8 @@
                 <span id="nav" class="nav-links">
                     <a href="#home" class="nav-link" data-scroll><span>Home</span></a>
                     <a href="#about" class="nav-link" data-scroll><span>About</span></a>
+                    <a href="#experience" class="nav-link" data-scroll><span>Experience</span></a>
+                    <a href="#skills" class="nav-link" data-scroll><span>Skills</span></a>
                     <a href="#projects" class="nav-link" data-scroll><span>Projects</span></a>
                     <a href="#tech-stack" class="nav-link" data-scroll><span>Tech Stack</span></a>
                     <a href="#contact" class="nav-link" data-scroll><span>Contact</span></a>
@@ -61,7 +64,7 @@
                     bring hardware to life with smooth, interactive experiences.
                 </p>
                 <div class="hero-actions">
-                    <a href="Resume_Namit_Seth.pdf" class="primary-btn" download="Resume_Namit_Seth.pdf">Download Resume</a>
+                    <button type="button" class="primary-btn" data-resume>Download Resume</button>
                     <button class="primary-btn" data-scroll data-target="#projects">View Projects</button>
                     <button class="ghost-btn" data-scroll data-target="#contact">Contact Me</button>
                 </div>
@@ -70,11 +73,11 @@
                 <div class="hero-highlight-grid">
                     <div class="hero-highlight-item">
                         <span class="metric-label">Electronics</span>
-                        <span class="metric-value">PCB • Sensors • Arduino</span>
+                        <span class="metric-value">PCB • Sensors • KiCad</span>
                     </div>
                     <div class="hero-highlight-item">
                         <span class="metric-label">Embedded</span>
-                        <span class="metric-value">C / C++ • Microcontrollers</span>
+                        <span class="metric-value">C / C++ • STM32 • ESP • ATmega</span>
                     </div>
                 </div>
                 <div class="hero-status">
@@ -103,7 +106,7 @@
                     and clean frontends.
                 </p>
                 <p>
-                    As Secretary of Electronika and Budget Head of Cesar, I've led technical teams, shipped life-sized arcade experiences, and delivered robotics showcases that are both robust and engaging.
+                    As Secretary of Elektronica, I've led the core team behind Elexonia, our annual electronics festival, and recently interned at SpaceBorn writing STM32 firmware and sensor drivers.
                 </p>
                 <p>
                     My toolkit spans circuit design, embedded programming, and web technologies like HTML,
@@ -131,6 +134,88 @@
         </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="section experience-section">
+        <div class="section-header reveal-on-scroll">
+            <p class="section-kicker">Experience</p>
+            <h2 class="section-title">Where I've worked and learned</h2>
+            <p class="section-subtitle">
+                Internships, education and leadership roles.
+            </p>
+        </div>
+        <div class="timeline">
+            <article class="timeline-item reveal-on-scroll">
+                <div class="timeline-date">Jun 2026 – Jul 2026</div>
+                <div class="timeline-card">
+                    <h3 class="timeline-title">Core Systems Intern</h3>
+                    <p class="timeline-org">SpaceBorn</p>
+                    <ul class="timeline-list">
+                        <li>Developed foundational embedded firmware on STM32 using STM32CubeIDE/CubeMX, including I2C/SPI communication wrappers, sensor data structures, and UART debugging within Git-based workflows.</li>
+                        <li>Architected and deployed a custom MPU6050 driver for motion tracking, using register-level manipulation and sensor fusion concepts to process real-time IMU data, and validated reliability in simulation environments like Wokwi.</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>STM32</span>
+                        <span>I2C / SPI / UART</span>
+                        <span>MPU6050</span>
+                        <span>Wokwi</span>
+                    </div>
+                </div>
+            </article>
+            <article class="timeline-item reveal-on-scroll">
+                <div class="timeline-date">Aug 2025 – Sep 2025</div>
+                <div class="timeline-card">
+                    <h3 class="timeline-title">Marketing Intern</h3>
+                    <p class="timeline-org">SecureDApp</p>
+                    <ul class="timeline-list">
+                        <li>Identified bottlenecks in data extraction pipelines and engineered custom Python scripts using Regex to automate workflows and replace manual scraping.</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>Python</span>
+                        <span>Regex</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </article>
+            <article class="timeline-item reveal-on-scroll">
+                <div class="timeline-date">Jan 2024 – Feb 2024</div>
+                <div class="timeline-card">
+                    <h3 class="timeline-title">Full Stack Web Developer Intern</h3>
+                    <p class="timeline-org">Techplement</p>
+                    <ul class="timeline-list">
+                        <li>Resolved team code integration challenges by establishing strict Git version control workflows for a collaborative React and Express application, ensuring clean repository merges.</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>React</span>
+                        <span>Express</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="edu-lead-grid">
+            <div class="timeline-card reveal-on-scroll">
+                <p class="timeline-kicker">Education</p>
+                <h3 class="timeline-title">B.Sc. (Hons) Electronics</h3>
+                <p class="timeline-org">Keshav Mahavidyalaya, Delhi University</p>
+                <p class="timeline-date-inline">Aug 2023 – Jun 2027</p>
+            </div>
+            <div class="timeline-card reveal-on-scroll">
+                <p class="timeline-kicker">Leadership</p>
+                <div class="lead-item">
+                    <h3 class="timeline-title">Secretary, Elektronica</h3>
+                    <p class="timeline-org">Keshav Mahavidyalaya · 2025 – 2026</p>
+                    <p class="timeline-text">Directed the core team in organizing Elexonia, the annual electronics festival, managing technical event logistics and cross-functional student teams.</p>
+                </div>
+                <div class="lead-item">
+                    <h3 class="timeline-title">Executive Member, Student Council</h3>
+                    <p class="timeline-org">Keshav Mahavidyalaya · 2025 – 2026</p>
+                    <p class="timeline-text">Fulfilled administrative duties as an appointed representative, acting as an official signatory to validate student council resolutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills -->
     <section id="skills" class="section skills-section">
         <div class="section-header reveal-on-scroll">
@@ -142,63 +227,40 @@
         </div>
         <div class="skills-grid">
             <div class="skills-column reveal-on-scroll">
-                <h3 class="skills-heading">Embedded & Hardware</h3>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>Microcontrollers (STM32, ESP, AVR)</span>
-                        <span class="skill-value">90%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="90"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>PCB Design & Simulation (KiCad)</span>
-                        <span class="skill-value">85%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="85"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>Protocols (I2C, SPI, UART, NEC)</span>
-                        <span class="skill-value">85%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="85"></div>
-                    </div>
+                <h3 class="skills-heading">Embedded &amp; Hardware</h3>
+                <div class="skill-tags">
+                    <span>ESP8266</span>
+                    <span>ESP32</span>
+                    <span>ATmega</span>
+                    <span>STM32</span>
+                    <span>RTC (DS1302)</span>
+                    <span>Sensor interfacing</span>
+                    <span>PCB design</span>
+                    <span>Soldering</span>
                 </div>
             </div>
             <div class="skills-column reveal-on-scroll">
-                <h3 class="skills-heading">Programming & Software</h3>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>C/C++ (Embedded) & Python</span>
-                        <span class="skill-value">90%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="90"></div>
-                    </div>
+                <h3 class="skills-heading">Protocols</h3>
+                <div class="skill-tags">
+                    <span>I2C</span>
+                    <span>SPI</span>
+                    <span>UART</span>
+                    <span>NEC (IR)</span>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>Web (HTML, CSS, JS, Flask)</span>
-                        <span class="skill-value">85%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="85"></div>
-                    </div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-label">
-                        <span>Tools (Git, STM32CubeIDE, SQL)</span>
-                        <span class="skill-value">80%</span>
-                    </div>
-                    <div class="skill-track">
-                        <div class="skill-bar-fill" data-skill="80"></div>
-                    </div>
+            </div>
+            <div class="skills-column reveal-on-scroll">
+                <h3 class="skills-heading">Languages &amp; Software</h3>
+                <div class="skill-tags">
+                    <span>C/C++ (Embedded)</span>
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                    <span>Git</span>
+                    <span>KiCad</span>
+                    <span>Proteus</span>
+                    <span>LTspice</span>
                 </div>
             </div>
             <div class="skills-column skills-pulse-card reveal-on-scroll">
@@ -415,17 +477,25 @@
             <div class="tech-carousel" aria-hidden="true">
                 <div class="tech-pill group-embedded">Arduino</div>
                 <div class="tech-pill group-embedded">ATmega</div>
-                <div class="tech-pill group-embedded">ESP-based boards</div>
+                <div class="tech-pill group-embedded">STM32</div>
+                <div class="tech-pill group-embedded">ESP8266 / ESP32</div>
+                <div class="tech-pill group-embedded">STM32CubeIDE</div>
                 <div class="tech-pill group-sensors">Ultrasonic sensors</div>
                 <div class="tech-pill group-sensors">IR modules</div>
                 <div class="tech-pill group-sensors">Temperature sensors</div>
                 <div class="tech-pill group-pcb">Breadboard prototyping</div>
-                <div class="tech-pill group-pcb">PCB layout tools</div>
+                <div class="tech-pill group-pcb">KiCad</div>
+                <div class="tech-pill group-pcb">Proteus</div>
+                <div class="tech-pill group-pcb">LTspice</div>
                 <div class="tech-pill group-web">HTML</div>
                 <div class="tech-pill group-web">CSS</div>
                 <div class="tech-pill group-web">JavaScript</div>
                 <div class="tech-pill group-web">Flask</div>
                 <div class="tech-pill group-web">SQLite</div>
+                <div class="tech-pill group-web">Python</div>
+                <div class="tech-pill group-web">C / C++</div>
+                <div class="tech-pill group-web">SQL</div>
+                <div class="tech-pill group-web">Git</div>
             </div>
         </div>
         <div class="tech-legend reveal-on-scroll">
@@ -459,8 +529,8 @@
                     visualizes hardware data — I'm excited to collaborate.
                 </p>
                 <div class="contact-meta">
-                    <p><strong>Email:</strong> <a href="mailto:sethnamit2006@gmail.com">sethnamit2006@gmail.com</a></p>
-                    <p><strong>Resume:</strong> <a href="Resume_Namit_Seth.pdf" download="Resume_Namit_Seth.pdf">Download PDF</a></p>
+                    <p><strong>Email:</strong> <a href="#" data-email>Click to reveal email</a></p>
+                    <p><strong>Resume:</strong> <a href="#" data-resume>Download PDF</a></p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/namit-seth/" target="_blank" rel="noopener">
                             <span><img src="linkedin.png" alt="LinkedIn" height="40"></span>
